@@ -1,0 +1,32 @@
+<h1>@<%= current_user.username %>'s Twitter Feed</h1>
+
+
+
+
+<div class="right">
+<div class="straight">
+  <%= render 'tweets/form' %>
+</div>
+
+<p>Here's what your friends are saying:</p>
+
+<div>
+	<% @following_tweets.each do |tweet| %>
+		<div>
+			<p> @<%= tweet.user.username %> </p>
+			<br />
+			<p> @<%= tweet.message.html_safe %> </p>
+		</div>
+	<%end%>
+</div>
+
+
+
+
+
+
+
+
+
+
+</div>
